@@ -15,4 +15,4 @@ include 'api'
 include 'services:webservice'
 */
 
-rootProject.name = 'try-spring-boot'
+rootProject.name = 'sandbox-spring-boot'

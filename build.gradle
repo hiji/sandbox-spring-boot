@@ -3,7 +3,7 @@ plugins {
 }
 
 jar {
-    baseName = 'type-spring-boot'
+    baseName = 'sandbox-spring-boot'
     version =  '0.0.1-SNAPSHOT'
 }
 

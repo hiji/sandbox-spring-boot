@@ -1,2 +1,2 @@
-# try-spring-boot
-Spring Bootの素振り
+# sandbox-spring-boot
+Spring Bootを触ってみる
