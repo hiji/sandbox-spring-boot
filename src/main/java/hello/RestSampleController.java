@@ -11,4 +11,9 @@ public class RestSampleController {
     public String hello() {
         return "hello!!";
     }
+
+    @GetMapping("/account")
+    public Account account() {
+        return new Account("hoge", 20);
+    }
 }
