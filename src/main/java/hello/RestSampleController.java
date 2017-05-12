@@ -26,7 +26,18 @@ public class RestSampleController {
     public Object xml() throws IOException {
         XmlMapper xmlMapper = new XmlMapper();
         xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-        Trade trace = xmlMapper.readValue(new File("/Users/hijiri/Downloads/sample.xml"), Trade.class);
+        Message trace = xmlMapper.readValue(new File("/Users/hijiri/Downloads/sample.xml"), Message.class);
         return trace;
+    }
+
+    @GetMapping("/xmlvalue")
+    public Response xmlvalue() throws IOException {
+        XmlMapper xmlMapper = new XmlMapper();
+        xmlMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        Message trace = xmlMapper.readValue(new File("/Users/hijiri/Downloads/sample.xml"), Message.class);
+        String otherHeader = trace.data.trade.otherHeader.split("\\t")[2];
+        Response response = new Response();
+        response.setValue(otherHeader);
+        return response;
     }
 }
